@@ -270,7 +270,7 @@ class confirmation extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome to our humble website! this is everything."),
+            Text("Welcome to our humble application! this is everything."),
           ],
         ),
       ),
