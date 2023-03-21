@@ -14,68 +14,71 @@ class index extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      appBar: AppBar(
-        title: Text("Login!"),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.airlines_outlined,
-              color: Colors.amber,
-              size: 100,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'username',
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'password',
-              ),
-            ),
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => confirmation(),
-                    ),
-                  );
-                },
-                icon: Icon(Icons.login_outlined)),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => forgot(),
-                    ),
-                  );
-                },
-                child: Text("Forgot password")),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => signup(),
-                    ),
-                  );
-                },
-                child: Text("New USER?!?!")),
-          ],
+        backgroundColor: Colors.grey[200],
+        appBar: AppBar(
+          title: Text("Login!"),
         ),
-      ),
-    );
+        body: Center(
+          child: SizedBox(
+            width: 250,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.airlines_outlined,
+                  color: Colors.amber,
+                  size: 100,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'username',
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'password',
+                  ),
+                  obscureText: true,
+                ),
+                IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => confirmation(),
+                        ),
+                      );
+                    },
+                    icon: Icon(Icons.login_outlined)),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => forgot(),
+                        ),
+                      );
+                    },
+                    child: Text("Forgot password")),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => signup(),
+                        ),
+                      );
+                    },
+                    child: Text("New USER?!?!")),
+              ],
+            ),
+          ),
+        ));
   }
 }
 
@@ -98,59 +101,64 @@ class forgot extends StatelessWidget {
         title: Text("CHANGE PASSWORD"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.airlines_outlined,
-              color: Colors.amber,
-              size: 100,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'username',
+        child: SizedBox(
+          width: 250,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.airlines_outlined,
+                color: Colors.amber,
+                size: 100,
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'new-password',
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'username',
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'repeat-password',
+              SizedBox(
+                height: 10,
               ),
-            ),
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => confirmation(),
-                    ),
-                  );
-                },
-                icon: Icon(Icons.login_outlined)),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => index(),
-                    ),
-                  );
-                },
-                child: Text("go to login")),
-          ],
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'new-password',
+                ),
+                obscureText: true,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'repeat-password',
+                ),
+                obscureText: true,
+              ),
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => confirmation(),
+                      ),
+                    );
+                  },
+                  icon: Icon(Icons.login_outlined)),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => index(),
+                      ),
+                    );
+                  },
+                  child: Text("go to login")),
+            ],
+          ),
         ),
       ),
     );
@@ -176,59 +184,64 @@ class signup extends StatelessWidget {
         title: Text("MAKE AN ACCOUNT!"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.airlines_outlined,
-              color: Colors.amber,
-              size: 100,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'username',
+        child: SizedBox(
+          width: 250,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.airlines_outlined,
+                color: Colors.amber,
+                size: 100,
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'password',
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'username',
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'repeat-password',
+              SizedBox(
+                height: 10,
               ),
-            ),
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => confirmation(),
-                    ),
-                  );
-                },
-                icon: Icon(Icons.login_outlined)),
-            TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => index(),
-                    ),
-                  );
-                },
-                child: Text("Already have an account ? Log in!")),
-          ],
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'password',
+                ),
+                obscureText: true,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'repeat-password',
+                ),
+                obscureText: true,
+              ),
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => confirmation(),
+                      ),
+                    );
+                  },
+                  icon: Icon(Icons.login_outlined)),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => index(),
+                      ),
+                    );
+                  },
+                  child: Text("Already have an account ? Log in!")),
+            ],
+          ),
         ),
       ),
     );
